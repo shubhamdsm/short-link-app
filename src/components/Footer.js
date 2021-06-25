@@ -19,28 +19,37 @@ function Footer() {
                 <img src={Logo} alt='logo'/>
             </div>
             <div className='d-flex'>
-                <div >
-                    <p>Features</p>
-                    <p>Link Shortening</p>
-                    <p>Branded Links</p>
-                    <p>Analytics</p>
+                <div>
+                    <ul>
+                        <li>Features</li>
+                        <li>Link Shortening</li>
+                        <li>Branded Links</li> 
+                        <li>Analytics</li>
+                  
+                    </ul>
+                   
 
                 </div>
                 <div>
-                    <p>Resources</p>
-                    <p>Blog</p>
-                    <p>Developers</p>
-                    <p>Support</p>
+                    <ul>
+                        <li>Resources</li>
+                        <li>Blog</li>
+                        <li>Developers</li>
+                        <li>Support</li>
+                    </ul>
+                  
                 </div>
                 <div>
-                    <p>Company</p>
-                    <p>About</p>
-                    <p>Our Team</p>
-                    <p>Careers</p>
-                    <p>Contact</p>
+                    <ul>
+                        <li>Company</li>
+                        <li>About</li>
+                        <li>Our Team</li>
+                        <li>Careers</li>
+                        <li>Contact</li>
+                    </ul>
                 </div>
             </div>
-            <div className='d-flex'>
+            <div className='d-flex justify-content-center align-items-center'>
                 <img src={Facebook} alt='facebook'/>
                 <img src={Twitter} alt='twitter'/>
                 <img src={Pinterset} alt='pinterest'/>

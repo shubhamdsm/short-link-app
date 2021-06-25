@@ -8,8 +8,9 @@ function Hero() {
         <Container>
             <Row>
                 <Col>
-                    <h1>More than just shorter links</h1>
-                    <p>Build your brand's recognition and get detailed insights on how your links are performing</p>
+                    <h1 style={{fontWeight:'900'}}>More than just shorter links</h1>
+                    <p style={{color:'grey'}}>Build your brand's recognition and get detailed insights on how your links are performing</p>
+                    
                     <Button variant="default" style={{ color: "white", background: "#2acfcf" , borderRadius:'40px'}}>
                     Get Started</Button>
                 </Col>

@@ -45,3 +45,6 @@ input{
 .link{
     margin-left: 5rem;
 }
+ul li{
+    list-style-type: none;
+}
