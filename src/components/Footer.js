@@ -9,7 +9,7 @@ function Footer() {
     return (
         <footer>
         <div className='d-flex flex-column justify-content-center align-items-center' style={{backgroundColor:'#3A3053', paddingTop:'2rem',paddingBottom:'2rem'}}>
-        <h6 style={{color:'white',fontWeight:'500',paddingBottom:'1rem'}}>Boost your links today</h6>
+        <h4 style={{color:'white',fontWeight:'500',paddingBottom:'1rem'}}>Boost your links today</h4>
            <Button variant="default"
         style={{ color: "white", background: "#2acfcf" , borderRadius:'40px'}}
        >Get Started</Button>
