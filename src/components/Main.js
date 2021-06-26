@@ -1,19 +1,29 @@
 import { useState } from "react";
+import CopyText from 'react-copy-text';
 export default function Main() {
   const [input, setInput] = useState("");
   const [link, setLink] = useState([]);
-  const [loading,setLoading] = useState(false)
+  const [loading,setLoading] = useState(false);
+  const [copyButton, setCopyButton] = useState('COPY');
+
+
 
   const handleSubmit = async () => {
     try {
+      setLoading(true)
       let res = await fetch(`https://api.shrtco.de/v2/shorten?url=${input}`);
       let json = await res.json();
       setLink((prevList) => [...prevList, json.result]);
-      setLoading(true)
+      setLoading(false)
+      setInput('')
     } catch (err) {
       console.log(err);
     }
   };
+  const handleCopy = (link) => {
+    setCopyButton('COPIED!');
+    CopyText(link)
+  }
 
   return (
     <main >
@@ -36,10 +46,12 @@ export default function Main() {
           <li className='list-group-item'
            key={item.original_link}>
            <span>{item.original_link}</span>
-           <span style={{color:'#2BD1D1'}} className='link'>{item.short_link}</span>
+           <a href ={item.short_link}style={{color:'#2BD1D1'}} className='link'>{item.short_link}</a>
+           <button className='btn'style={{marginLeft:'4rem'}} onClick={handleCopy} link ={item.short_link}>{copyButton}</button>
           </li>
         ))}
       </ul>
+      <span style={{textAlign:"center"}}>{loading ? 'loading': ''}</span>
       </div>
         
      

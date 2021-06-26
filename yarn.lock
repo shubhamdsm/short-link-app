@@ -9067,7 +9067,7 @@
     "react-is" "^16.3.2"
     "warning" "^4.0.0"
 
-"prop-types@^15.6.2", "prop-types@^15.7.2":
+"prop-types@^15.6.0", "prop-types@^15.6.2", "prop-types@^15.7.2":
   "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -9265,6 +9265,13 @@
     "react-transition-group" "^4.4.1"
     "uncontrollable" "^7.2.1"
     "warning" "^4.0.3"
+
+"react-copy-text@^1.0.1":
+  "integrity" "sha512-89IL1u1AVNeEh/XrRQh5N+Vza6SVQuOs0TrtDI89s6s/ExvmM30k7/Ir9qnHA4OutBKCEhGMuRKY7lpYDrOP8Q=="
+  "resolved" "https://registry.npmjs.org/react-copy-text/-/react-copy-text-1.0.1.tgz"
+  "version" "1.0.1"
+  dependencies:
+    "prop-types" "^15.6.0"
 
 "react-dev-utils@^11.0.3":
   "integrity" "sha512-dx0LvIGHcOPtKbeiSUM4jqpBl3TcY7CDjZdfOIcKeznE7BWr9dg0iPG90G5yfVQ+p/rGNMXdbfStvzQZEVEi4A=="
