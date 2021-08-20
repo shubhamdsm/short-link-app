@@ -5,7 +5,7 @@ export default function Main() {
   const [link, setLink] = useState([]);
   const [loading,setLoading] = useState(false);
   const [copyButton, setCopyButton] = useState('COPY');
-  const [shortLink, setShortLink] = useState('');
+ 
 
 
 
@@ -24,7 +24,7 @@ export default function Main() {
   };
   
 function handleCopy(item){
-  setShortLink(item.short_link)
+ 
   setCopyButton('COPIED')
   copy(item.short_link)
 
