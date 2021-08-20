@@ -1,10 +1,11 @@
 import { useState } from "react";
-import CopyText from 'react-copy-text';
+import copy from 'copy-to-clipboard'
 export default function Main() {
   const [input, setInput] = useState("");
   const [link, setLink] = useState([]);
   const [loading,setLoading] = useState(false);
   const [copyButton, setCopyButton] = useState('COPY');
+  const [shortLink, setShortLink] = useState('');
 
 
 
@@ -14,16 +15,20 @@ export default function Main() {
       let res = await fetch(`https://api.shrtco.de/v2/shorten?url=${input}`);
       let json = await res.json();
       setLink((prevList) => [...prevList, json.result]);
+     
       setLoading(false)
       setInput('')
     } catch (err) {
       console.log(err);
     }
   };
-  const handleCopy = (link) => {
-    setCopyButton('COPIED!');
-    CopyText(link)
-  }
+  
+function handleCopy(item){
+  setShortLink(item.short_link)
+  setCopyButton('COPIED')
+  copy(item.short_link)
+
+}
 
   return (
     <main >
@@ -42,14 +47,19 @@ export default function Main() {
       <div className='container'>
        
       <ul className='list-group'>
+      <div>
         {link.map((item) => (
+         
           <li className='list-group-item'
            key={item.original_link}>
            <span>{item.original_link}</span>
            <a href ={item.short_link}style={{color:'#2BD1D1'}} className='link'>{item.short_link}</a>
-           <button className='btn'style={{marginLeft:'4rem'}} onClick={handleCopy} link ={item.short_link}>{copyButton}</button>
+           <button className='btn'style={{marginLeft:'4rem'}} onClick={() => handleCopy(item)}>{copyButton}</button>
+
           </li>
+         
         ))}
+        </div>
       </ul>
       <span style={{textAlign:"center"}}>{loading ? 'loading': ''}</span>
       </div>
